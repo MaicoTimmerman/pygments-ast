@@ -18,7 +18,7 @@ class ASTLexer(RegexLexer):
             (words(("double", "float", "int", "uint", "int8", "int16",
                     "int32", "int64", "uint8", "uint16", "uint32", "uint64",
                     "string", "bool ")), Keyword.Type),
-            (words(("false", "true", "NULL")), Literal),
+            (words(("false", "true", "NULL")), Name.Builtin),
             (words(("(", ")", "[", "]", "{", "}", ",", "=", ";", "!")),
              Punctuation),
             (r'[A-Za-z][A-Za-z0-9_]*', Name),
