@@ -10,14 +10,16 @@ class ASTLexer(RegexLexer):
 
     tokens = {
         'root': [
+
             (words(("phase", "pass", "node", "nodeset", "traversal",
-                    "attributes", "children", "construct", "cycle", "enum",
-                    "mandatory", "nodes", "passes", "phases", "prefix",
-                    "subphases", "to", "values", "info", "func", "root",),
-                   suffix=r'\s*($|(?=[^\w\-]))'), Keyword),
-            (words(("double", "float", "int", "uint", "int8", "int16",
-                    "int32", "int64", "uint8", "uint16", "uint32", "uint64",
-                    "string", "bool")), Keyword.Type),
+                    "attributes", "children", "constructor", "construct",
+                    "cycle", "enum", "mandatory", "nodes", "passes", "phases",
+                    "prefix", "subphases", "to", "values", "info", "func",
+                    "root",), suffix=r'\s*($|(?=[^\w\-]))'), Keyword),
+            (words(("double", "float", "int", "uint", "int8", "int16", "int32",
+                    "int64", "uint8", "uint16", "uint32", "uint64", "string",
+                    "bool")), Keyword.Type),
+
             (words(("false", "true", "NULL")), Name.Builtin),
             (words(("(", ")", "[", "]", "{", "}", ",", "=", ";", "!")),
              Punctuation),
